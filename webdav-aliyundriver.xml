@@ -11,7 +11,7 @@
   <Project>https://github.com/zxbu/webdav-aliyundriver</Project>
   <Overview>&#x672C;&#x9879;&#x76EE;&#x5B9E;&#x73B0;&#x4E86;&#x963F;&#x91CC;&#x4E91;&#x76D8;&#x7684;webdav&#x534F;&#x8BAE;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x7B80;&#x5355;&#x7684;&#x914D;&#x7F6E;&#x4E00;&#x4E0B;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x8BA9;&#x963F;&#x91CC;&#x4E91;&#x76D8;&#x53D8;&#x8EAB;&#x4E3A;webdav&#x534F;&#x8BAE;&#x7684;&#x6587;&#x4EF6;&#x670D;&#x52A1;&#x5668;&#x3002; &#x57FA;&#x4E8E;&#x6B64;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x628A;&#x963F;&#x91CC;&#x4E91;&#x76D8;&#x6302;&#x8F7D;&#x4E3A;Windows&#x3001;Linux&#x3001;Mac&#x7CFB;&#x7EDF;&#x7684;&#x78C1;&#x76D8;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;NAS&#x7CFB;&#x7EDF;&#x505A;&#x6587;&#x4EF6;&#x7BA1;&#x7406;&#x6216;&#x6587;&#x4EF6;&#x540C;&#x6B65;&#xFF0C;&#x66F4;&#x591A;&#x73A9;&#x6CD5;&#x7B49;&#x4F60;&#x6316;&#x6398;</Overview>
   <Category>Cloud:</Category>
-  <WebUI>http://[IP]:[PORT:9080]</WebUI>
+  <WebUI>http://[IP]:[PORT:9088]</WebUI>
   <TemplateURL/>
   <Icon>https://img.05sun.com/attachment/soft/2021/0419/134645_97947973.png</Icon>
   <ExtraParams/>
