@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>sonarr-sma</Name>
+  <Repository>randomninjaatk/sonarr-sma</Repository>
+  <Registry>https://hub.docker.com/r/randomninjaatk/sonarr-sma</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://discord.gg/JumQXDc</Support>
+  <Project>https://github.com/RandomNinjaAtk/docker-sonarr-sma</Project>
+  <Overview>Sonarr is a PVR for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them. This comes bundled with sickbeard_mp4_automator script, that can be found here: https://github.com/mdhiggins/sickbeard_mp4_automator[br][br][b][u][span style='color: #E80000;']Nvidia GPU Use[/span][/u][/b][br]Using the Unraid Nvidia Plugin to install a version of Unraid with the Nvidia Drivers installed and[br] add [b]--runtime=nvidia[/b] to [b]"extra parameters"[/b] (switch on advanced view) and[br]copy your [b]GPU UUID[/b] to [b]NVIDIA_VISIBLE_DEVICES.[/b][br][br][b][u][span style='color: #E80000;']Intel GPU Use[/span][/u][/b][br]Edit your [b]go[/b] file to include:[br][b]modprobe i915[br][/b], save and reboot, then [br]add [b]--device=/dev/dri[/b] to [b]"extra parameters"[/b] (switch on advanced view)</Overview>
+  <Category>Downloaders: MediaApp:Video</Category>
+  <WebUI>http://[IP]:[PORT:8989]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/RandomNinjaAtk/unraid-templates/master/randomninjaatk/sonarr-sma.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/RandomNinjaAtk/unraid-templates/master/randomninjaatk/img/sonarr.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1635484024</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Description>Sonarr is a PVR for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them. This comes bundled with sickbeard_mp4_automator script, that can be found here: https://github.com/mdhiggins/sickbeard_mp4_automator&#xD;
+&#xD;
+Nvidia GPU Use&#xD;
+Using the Unraid Nvidia Plugin to install a version of Unraid with the Nvidia Drivers installed and&#xD;
+ add --runtime=nvidia to "extra parameters" (switch on advanced view) and&#xD;
+copy your GPU UUID to NVIDIA_VISIBLE_DEVICES.&#xD;
+&#xD;
+Intel GPU Use&#xD;
+Edit your go file to include:&#xD;
+modprobe i915&#xD;
+, save and reboot, then &#xD;
+add --device=/dev/dri to "extra parameters" (switch on advanced view)</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8989</HostPort>
+        <ContainerPort>8989</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/sonarr-sma</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/dev/rtc</HostDir>
+      <ContainerDir>/dev/rtc</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/Media/</HostDir>
+      <ContainerDir>/storage</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/sonarr-sma/sma</HostDir>
+      <ContainerDir>/usr/local/sma/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/Media/torrent/downloads/</HostDir>
+      <ContainerDir>/downloads</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/Media/tv/</HostDir>
+      <ContainerDir>/tv</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>1000</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Host Port for 8989" Target="8989" Default="8989" Mode="tcp" Description="" Type="Port" Display="always-hide" Required="true" Mask="false">8989</Config>
+  <Config Name="Host Path for /config" Target="/config" Default="" Mode="rw" Description="" Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/appdata/sonarr-sma</Config>
+  <Config Name="Host Path for /dev/rtc" Target="/dev/rtc" Default="/dev/rtc" Mode="rw" Description="" Type="Path" Display="always-hide" Required="true" Mask="false">/dev/rtc</Config>
+  <Config Name="Host Path for /storage" Target="/storage" Default="/mnt/user" Mode="rw" Description="" Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/Media/</Config>
+  <Config Name="smacfg" Target="/usr/local/sma/config" Default="/mnt/user/appdata/sonarr/sma" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/sonarr-sma/sma</Config>
+  <Config Name="downloads" Target="/downloads" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Media/torrent/downloads/</Config>
+  <Config Name="TV" Target="/tv" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Media/tv/</Config>
+  <Config Name="/dev/dri" Target="" Default="" Mode="" Description="" Type="Device" Display="always" Required="false" Mask="false">/dev/dri</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">1000</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">100</Config>
+</Container>
