@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ddns</Name>
+  <Repository>nevinee/ddns</Repository>
+  <Registry>https://hub.docker.com/r/nevinee/ddns</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview>&#x81EA;&#x52A8;&#x66F4;&#x65B0; DNS &#x89E3;&#x6790; &#x5230;&#x672C;&#x673A; IP &#x5730;&#x5740;,&#x652F;&#x6301; ipv4 &#x548C; ipv6 &#x4EE5; &#x672C;&#x5730;(&#x5185;&#x7F51;)IP &#x548C; &#x516C;&#x7F51; IP&#x3002; &#x4EE3;&#x7406;&#x6A21;&#x5F0F;,&#x652F;&#x6301;&#x81EA;&#x52A8;&#x521B;&#x5EFA;&#x57DF;&#x540D;&#x8BB0;&#x5F55;&#x3002;&#xD;
+&#x672C;&#x955C;&#x50CF;&#x548C;&#x539F;&#x7248;&#x7684;&#x4E00;&#x70B9;&#x70B9;&#x533A;&#x522B;&#xFF1A;&#xD;
+&#x539F;&#x7248;&#x76F4;&#x63A5;&#x6620;&#x5C04;&#x4E00;&#x4E2A;config.json&#x6587;&#x4EF6;&#xFF0C;&#x672C;&#x955C;&#x50CF;&#x6620;&#x5C04;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5939;config&#xFF0C;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x9664;&#x4E86;&#x8981;&#x653E;config.json&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x653E;&#x4E00;&#x4E9B;&#x5176;&#x4ED6;&#x7684;&#x8F85;&#x52A9;&#x811A;&#x672C;&#xFF1B;&#xD;
+&#x539F;&#x7248;&#x7684;cron&#x65E0;&#x6CD5;&#x81EA;&#x5B9A;&#x4E49;&#xFF0C;&#x672C;&#x955C;&#x50CF;&#x53EF;&#x4EE5;&#xFF1B;&#xD;
+&#x628A;&#x65F6;&#x533A;&#x8C03;&#x6574;&#x4E3A;&#x5317;&#x4EAC;&#x65F6;&#x95F4;&#xFF1B;&#xD;
+&#x589E;&#x52A0;&#x4E86;bash, curl&#x5305;&#xFF0C;&#x65B9;&#x4FBF;&#x81EA;&#x5DF1;&#x5199;&#x83B7;&#x53D6;ip&#x7684;shell&#x811A;&#x672C;&#x3002;</Overview>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1635748396</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Description>&#x81EA;&#x52A8;&#x66F4;&#x65B0; DNS &#x89E3;&#x6790; &#x5230;&#x672C;&#x673A; IP &#x5730;&#x5740;,&#x652F;&#x6301; ipv4 &#x548C; ipv6 &#x4EE5; &#x672C;&#x5730;(&#x5185;&#x7F51;)IP &#x548C; &#x516C;&#x7F51; IP&#x3002; &#x4EE3;&#x7406;&#x6A21;&#x5F0F;,&#x652F;&#x6301;&#x81EA;&#x52A8;&#x521B;&#x5EFA;&#x57DF;&#x540D;&#x8BB0;&#x5F55;&#x3002;&#xD;
+&#x672C;&#x955C;&#x50CF;&#x548C;&#x539F;&#x7248;&#x7684;&#x4E00;&#x70B9;&#x70B9;&#x533A;&#x522B;&#xFF1A;&#xD;
+&#x539F;&#x7248;&#x76F4;&#x63A5;&#x6620;&#x5C04;&#x4E00;&#x4E2A;config.json&#x6587;&#x4EF6;&#xFF0C;&#x672C;&#x955C;&#x50CF;&#x6620;&#x5C04;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5939;config&#xFF0C;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x9664;&#x4E86;&#x8981;&#x653E;config.json&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x653E;&#x4E00;&#x4E9B;&#x5176;&#x4ED6;&#x7684;&#x8F85;&#x52A9;&#x811A;&#x672C;&#xFF1B;&#xD;
+&#x539F;&#x7248;&#x7684;cron&#x65E0;&#x6CD5;&#x81EA;&#x5B9A;&#x4E49;&#xFF0C;&#x672C;&#x955C;&#x50CF;&#x53EF;&#x4EE5;&#xFF1B;&#xD;
+&#x628A;&#x65F6;&#x533A;&#x8C03;&#x6574;&#x4E3A;&#x5317;&#x4EAC;&#x65F6;&#x95F4;&#xFF1B;&#xD;
+&#x589E;&#x52A0;&#x4E86;bash, curl&#x5305;&#xFF0C;&#x65B9;&#x4FBF;&#x81EA;&#x5DF1;&#x5199;&#x83B7;&#x53D6;ip&#x7684;shell&#x811A;&#x672C;&#x3002;</Description>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/ddns/config/</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>3-53/5 * * * *</Value>
+      <Name>CRON</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels>
+    <Label>
+      <Value>always</Value>
+      <Name>restart</Name>
+      <Mode/>
+    </Label>
+    <Label>
+      <Value>ddns</Value>
+      <Name>hostname</Name>
+      <Mode/>
+    </Label>
+  </Labels>
+  <Config Name="restart" Target="restart" Default="" Mode="" Description="" Type="Label" Display="always" Required="false" Mask="false">always</Config>
+  <Config Name="hostname" Target="hostname" Default="" Mode="" Description="" Type="Label" Display="always" Required="false" Mask="false">ddns</Config>
+  <Config Name="config" Target="/config" Default="" Mode="rw" Description="&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x5FC5;&#x987B;&#x5B58;&#x5728;&#x6309;&#x5B98;&#x65B9;&#x6559;&#x7A0B;&#x914D;&#x7F6E;&#x597D;&#x7684;config.json" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/ddns/config/</Config>
+  <Config Name="&#x5B9A;&#x65F6;" Target="CRON" Default="" Mode="" Description="&#x5B9A;&#x65F6;&#x66F4;&#x65B0;&#x89E3;&#x6790;&#x5730;&#x5740;" Type="Variable" Display="always" Required="false" Mask="false">3-53/5 * * * *</Config>
+</Container>
