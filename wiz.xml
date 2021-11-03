@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>wiz</Name>
+  <Repository>wiznote/wizserver</Repository>
+  <Registry>https://hub.docker.com/r/wiznote/wizserver</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview>&#x4E3A;&#x77E5;&#x7B14;&#x8BB0;</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:8000]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/jackberry/unraid-Template/main/img/wiz.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1635569194</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>https://www.wiz.cn/zh-cn/docker</Requires>
+  <Description>&#x4E3A;&#x77E5;&#x7B14;&#x8BB0;</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8000</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>9269</HostPort>
+        <ContainerPort>9269</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/wiz/wizdata</HostDir>
+      <ContainerDir>/wiz/storage</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>Asia/Shanghai</Value>
+      <Name>TZ</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1000</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels>
+    <Label>
+      <Value>always</Value>
+      <Name>restart</Name>
+      <Mode/>
+    </Label>
+  </Labels>
+  <Config Name="restart" Target="restart" Default="" Mode="" Description="" Type="Label" Display="always" Required="false" Mask="false">always</Config>
+  <Config Name="wizdata" Target="/wiz/storage" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/wiz/wizdata</Config>
+  <Config Name="webui&#x7AEF;&#x53E3;" Target="80" Default="80" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8000</Config>
+  <Config Name="ports" Target="9269" Default="9269" Mode="udp" Description="" Type="Port" Display="always" Required="false" Mask="false">9269</Config>
+  <Config Name="TZ" Target="TZ" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">Asia/Shanghai</Config>
+  <Config Name="PUID" Target="PUID" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">1000</Config>
+  <Config Name="PGID" Target="PGID" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+</Container>
