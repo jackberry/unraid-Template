@@ -17,11 +17,11 @@
   <Category/>
   <WebUI/>
   <TemplateURL/>
-  <Icon/>
+  <Icon>https://raw.githubusercontent.com/jackberry/unraid-Template/main/img/cc.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1635910431</DateInstalled>
+  <DateInstalled>1635910892</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Requires>https://gitee.com/evine/dockerfiles/tree/master/subfinder</Requires>
