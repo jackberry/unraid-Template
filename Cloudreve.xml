@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Cloudreve</Name>
+  <Repository>xavierniu/cloudreve:latest</Repository>
+  <Registry>https://hub.docker.com/r/xavierniu/cloudreve</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>http://lime-technology.com/forum/index.php?topic=45838.0</Support>
+  <Project>https://docs.cloudreve.org/</Project>
+  <Overview>
+    Cloudreve &#x80FD;&#x52A9;&#x60A8;&#x4EE5;&#x6700;&#x4F4E;&#x7684;&#x6210;&#x672C;&#x5FEB;&#x901F;&#x642D;&#x5EFA;&#x516C;&#x79C1;&#x517C;&#x5907;&#x7684;&#x7F51;&#x76D8;&#x7CFB;&#x7EDF;&#xFF0C;&#x652F;&#x6301;&#x591A;&#x5BB6;&#x4E91;&#x5B58;&#x50A8;&#x9A71;&#x52A8;&#x3002;
+  </Overview>
+  <Category>Cloud: Network:Web Tools:</Category>
+  <WebUI>http://[IP]:[PORT:5212]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/shuosiw/unraid/master/Cloudreve.xml</TemplateURL>
+  <Icon>https://github.com/shuosiw/unraid/raw/master/images/cloudreve-icon.png</Icon>
+  <ExtraParams>--mount type=tmpfs,destination=/tmp</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1635603595</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>https://github.com/cloudreve/Cloudreve</Requires>
+  <Description>&#xD;
+    &#x5E94;&#x7528;&#x4ECB;&#x7ECD;&#xD;
+&#xD;
+    Cloudreve &#x80FD;&#x52A9;&#x60A8;&#x4EE5;&#x6700;&#x4F4E;&#x7684;&#x6210;&#x672C;&#x5FEB;&#x901F;&#x642D;&#x5EFA;&#x516C;&#x79C1;&#x517C;&#x5907;&#x7684;&#x7F51;&#x76D8;&#x7CFB;&#x7EDF;&#xFF0C;&#x652F;&#x6301;&#x591A;&#x5BB6;&#x4E91;&#x5B58;&#x50A8;&#x9A71;&#x52A8;&#x3002;&#xD;
+&#xD;
+&#xD;
+    &#x9700;&#x8981;&#x5148;&#x624B;&#x52A8;&#x521B;&#x5EFA;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x53CA;&#x6570;&#x636E;&#x5E93;&#x6587;&#x4EF6;&#xD;
+&#xD;
+&#xD;
+    &#x6587;&#x6863;&#x4ECB;&#x7ECD;&#xD;
+&#xD;
+    https://docs.cloudreve.org/&#xD;
+&#xD;
+&#xD;
+  </Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5212</HostPort>
+        <ContainerPort>5212</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/cloudreve/sync</HostDir>
+      <ContainerDir>/cloudreve/uploads</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/cloudreve/temp</HostDir>
+      <ContainerDir>/temp</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/cloudreve/config</HostDir>
+      <ContainerDir>/cloudreve/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/cloudreve/db</HostDir>
+      <ContainerDir>/cloudreve/db</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/cloudreve/avatar</HostDir>
+      <ContainerDir>/cloudreve/avatar</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>Asia/Shanghai</Value>
+      <Name>TZ</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1000</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>GUID</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="WebUI &#x7AEF;&#x53E3;" Target="5212" Default="5212" Mode="tcp" Description="WebUI &#x7AEF;&#x53E3;&#xFF0C;&#x5BF9;&#x5E94;&#x5BB9;&#x5668;&#x4E2D;&#x7684; 5212 &#x7AEF;&#x53E3;" Type="Port" Display="always" Required="true" Mask="false">5212</Config>
+  <Config Name="&#x4E0A;&#x4F20;&#x76EE;&#x5F55;" Target="/cloudreve/uploads" Default="" Mode="rw" Description="&#x8BE5;&#x76EE;&#x5F55;&#x5C06;&#x6620;&#x5C04;&#x5230;&#x5BB9;&#x5668;&#x4E2D;&#x7684; /cloudreve/uploads&#xFF0C;&#x4F5C;&#x4E3A;&#x4E0A;&#x4F20;&#x76EE;&#x5F55;" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/cloudreve/sync</Config>
+  <Config Name="&#x4E34;&#x65F6;&#x76EE;&#x5F55;" Target="/temp" Default="" Mode="rw" Description="&#x8BE5;&#x76EE;&#x5F55;&#x5C06;&#x6620;&#x5C04;&#x5230;&#x5BB9;&#x5668;&#x4E2D;&#x7684; /cloudreve/uploads&#xFF0C;&#x4F5C;&#x4E3A;&#x4E0A;&#x4F20;&#x76EE;&#x5F55;" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/cloudreve/temp</Config>
+  <Config Name="&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x76EE;&#x5F55;" Target="/cloudreve/config" Default="" Mode="rw" Description="&#x8BE5;&#x76EE;&#x5F55;&#x5C06;&#x6620;&#x5C04;&#x5230;&#x5BB9;&#x5668;&#x4E2D;&#x7684; /cloudreve/config &#x4F5C;&#x4E3A;&#x4E34;&#x65F6;&#x76EE;&#x5F55;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x76EE;&#x5F55;" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/cloudreve/config</Config>
+  <Config Name="&#x65F6;&#x533A;" Target="TZ" Default="" Mode="" Description="&#x65F6;&#x533A;&#x8BBE;&#x7F6E;" Type="Variable" Display="always" Required="false" Mask="false">Asia/Shanghai</Config>
+  <Config Name="&#x6570;&#x636E;&#x6587;&#x4EF6;" Target="/cloudreve/db" Default="" Mode="rw" Description="&#x8BE5;&#x6587;&#x4EF6;&#x5C06;&#x6620;&#x5C04;&#x5230;&#x5BB9;&#x5668;&#x4E2D;&#x7684; /cloudreve/db&#xFF0C;&#x7528;&#x4E8E;&#x5B58;&#x50A8; cloudreve &#x5143;&#x6570;&#x636E;" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/cloudreve/db</Config>
+  <Config Name="&#x5934;&#x50CF;&#x76EE;&#x5F55;" Target="/cloudreve/avatar" Default="" Mode="rw" Description="&#x8BE5;&#x76EE;&#x5F55;&#x5C06;&#x6620;&#x5C04;&#x5230;&#x5BB9;&#x5668;&#x4E2D;&#x7684; /cloudreve/avatar&#xFF0C;&#x7528;&#x4E8E;&#x5B58;&#x50A8; cloudreve &#x5934;&#x50CF;&#x6587;&#x4EF6;" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/cloudreve/avatar</Config>
+  <Config Name="&#x7528;&#x6237; ID" Target="PUID" Default="" Mode="" Description="&#x8FD0;&#x884C; Cloudreve &#x5BB9;&#x5668;&#x7684;&#x7528;&#x6237;" Type="Variable" Display="advanced" Required="false" Mask="false">1000</Config>
+  <Config Name="&#x7528;&#x6237;&#x7EC4; ID" Target="GUID" Default="" Mode="" Description="&#x8FD0;&#x884C; Cloudreve &#x5BB9;&#x5668;&#x7684;&#x7528;&#x6237;&#x7EC4;" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+  <Config Name="&#x6570;&#x636E;&#x6587;&#x4EF6;" Target="/cloudreve/cloudreve.db" Default="" Mode="rw" Description="&#x8BE5;&#x6587;&#x4EF6;&#x5C06;&#x6620;&#x5C04;&#x5230;&#x5BB9;&#x5668;&#x4E2D;&#x7684; /cloudreve/cloudreve.db&#xFF0C;&#x7528;&#x4E8E;&#x5B58;&#x50A8; cloudreve &#x5143;&#x6570;&#x636E;" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/cloudreve/cloudreve.db</Config>
+  <Config Name="&#x914D;&#x7F6E;&#x6587;&#x4EF6;" Target="/cloudreve/conf.ini" Default="" Mode="rw" Description="&#x8BE5;&#x6587;&#x4EF6;&#x5C06;&#x6620;&#x5C04;&#x5230;&#x5BB9;&#x5668;&#x4E2D;&#x7684; /cloudreve/conf.ini&#xFF0C;&#x4F5C;&#x4E3A;  cloudreve &#x914D;&#x7F6E;&#x6587;&#x4EF6;" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/cloudreve/conf.ini</Config>
+</Container>

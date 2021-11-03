@@ -31,3 +31,15 @@
 ## tinymediamanager
 ### 项目主页： https://github.com/romancin/tinymediamanager-docker
 ### Docker主页：https://hub.docker.com/r/romancin/tinymediamanager
+
+## wiz为知笔记
+### 官网： https://www.wiz.cn
+### 官方部署文档：https://www.wiz.cn/zh-cn/docker
+### Docker主页：https://hub.docker.com/r/wiznote/wizserver
+
+## Zfile
+
+## cloudreve
+### 官方网站：https://cloudreve.org/
+### 项目主页：https://github.com/cloudreve/Cloudreve
+### Docker主页：https://hub.docker.com/r/xavierniu/cloudreve
