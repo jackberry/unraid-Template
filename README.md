@@ -1,10 +1,5 @@
 # unraid 常用Docker模板
-## webdav-aliyundriver
-### 作者 @zx5253
-### 项目主页：https://www.github.com/zxbu/webdav-aliyundriver
-### Docker主页:https://hub.docker.com/r/zx5253/webdav-aliyundriver
-***需修改内容请参考项目主页***
-
+# 网络相关
 ## ddns
 ### 作者 
 ### 项目主页：https://github.com/NewFuture/DDNS
@@ -37,9 +32,25 @@
 ### 官方部署文档：https://www.wiz.cn/zh-cn/docker
 ### Docker主页：https://hub.docker.com/r/wiznote/wizserver
 
+# 网盘相关
 ## Zfile
 
 ## cloudreve
 ### 官方网站：https://cloudreve.org/
 ### 项目主页：https://github.com/cloudreve/Cloudreve
 ### Docker主页：https://hub.docker.com/r/xavierniu/cloudreve
+
+## webdav-aliyundriver
+### 作者 @zx5253
+### 项目主页：https://www.github.com/zxbu/webdav-aliyundriver
+### Docker主页:https://hub.docker.com/r/zx5253/webdav-aliyundriver
+### 需修改内容请参考项目主页
+
+# 媒体娱乐
+## subfinder
+### 简介
+### 中文字幕自动下载，是这个项目的Docker实现：https://github.com/ausaki/subfinder
+### 基于alpine实现，镜像体积小，支持 amd64/arm64/armv7 三大主流架构。
+### 还有另外一个作者的同类项目目前仍在更新：https://github.com/allanpk716/ChineseSubFinder ，但需要媒体中心写入nfo，如果种子本身含有同名nfo就会与pt做种冲突。
+### 项目主页：https://github.com/ausaki/subfinder
+### Docker主页：https://hub.docker.com/r/nevinee/subfinder
