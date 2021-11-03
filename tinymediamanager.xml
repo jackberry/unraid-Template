@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>tinymediamanager</Name>
+  <Repository>romancin/tinymediamanager</Repository>
+  <Registry>https://hub.docker.com/r/romancin/tinymediamanager</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/romancin/tinymediamanager-docker</Project>
+  <Overview/>
+  <Category>MediaApp:Video</Category>
+  <WebUI>http://[IP]:[PORT:5800]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://ftp.bmp.ovh/imgs/2021/07/cf4553f9fde8ce96.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1635758477</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5800</HostPort>
+        <ContainerPort>5800</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>5900</HostPort>
+        <ContainerPort>5900</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/tinymediamanager/config</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/Media</HostDir>
+      <ContainerDir>/Media</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>1000</Value>
+      <Name>USER_ID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>GROUP_ID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>Asia/shanghai</Value>
+      <Name>TZ</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1</Value>
+      <Name>ENABLE_CJK_FONT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1</Value>
+      <Name>CLEAN_TMP_DIR</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="config" Target="/config" Default="" Mode="rw" Description="&#x5BB9;&#x5668;&#x8DEF;&#x5F84;&#xFF1A;/config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/tinymediamanager/config</Config>
+  <Config Name="Media" Target="/Media" Default="" Mode="rw" Description="&#x5BB9;&#x5668;&#x8DEF;&#x5F84;&#xFF1A;/Media" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Media</Config>
+  <Config Name="web_gui" Target="5800" Default="5800" Mode="tcp" Description="&#x5BB9;&#x5668; Port: 5800" Type="Port" Display="always" Required="false" Mask="false">5800</Config>
+  <Config Name="vnc-port" Target="5900" Default="5900" Mode="tcp" Description="&#x5BB9;&#x5668; Path: 5900" Type="Port" Display="always" Required="false" Mask="false">5900</Config>
+  <Config Name="USER_ID" Target="USER_ID" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: USER_ID" Type="Variable" Display="always" Required="false" Mask="false">1000</Config>
+  <Config Name="GROUP_ID" Target="GROUP_ID" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: GROUP_ID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="TZ" Target="TZ" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: TZ" Type="Variable" Display="always" Required="false" Mask="false">Asia/shanghai</Config>
+  <Config Name="ENABLE_CJK_FONT" Target="ENABLE_CJK_FONT" Default="0" Mode="" Description="&#x5BB9;&#x5668; Variable: ENABLE_CJK_FONT" Type="Variable" Display="always" Required="false" Mask="false">1</Config>
+  <Config Name="CLEAN_TMP_DIR" Target="CLEAN_TMP_DIR" Default="0" Mode="" Description="&#x91CD;&#x542F;&#x65F6;&#x6E05;&#x7406;temp&#x6587;&#x4EF6;&#x5939;" Type="Variable" Display="always" Required="false" Mask="false">1</Config>
+</Container>
