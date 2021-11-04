@@ -54,3 +54,6 @@
 ### 还有另外一个作者的同类项目目前仍在更新：https://github.com/allanpk716/ChineseSubFinder ，但需要媒体中心写入nfo，如果种子本身含有同名nfo就会与pt做种冲突。
 ### 项目主页：https://github.com/ausaki/subfinder
 ### Docker主页：https://hub.docker.com/r/nevinee/subfinder
+
+## jellyfin
+### 使用ich777模板，增加转码和字体文件夹影视，经测试VAAPI可正常硬解
